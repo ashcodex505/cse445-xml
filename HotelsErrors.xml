@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- (1) Root element wrong: must be 'Hotels', we use 'Hotel' -->
+<Hotel>
+
+  <!-- (5) Two Name elements for one hotel -->
+  <Hotel NearestAirport="Sky Harbor" Rating="4.0">
+    <Name>Westin</Name>
+    <Name>Westin Tempe</Name>
+    <Phone>480-968-8885</Phone>
+    <Address>
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- (2) Missing required attribute NearestAirport -->
+  <Hotel>
+    <Name>Hyatt Place Tempe</Name>
+    <Phone>480-000-1111</Phone>
+    <Address>
+      <Number>132</Number>
+      <Street>S Forest Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- (3) No Phone element at all -->
+  <Hotel NearestAirport="Sky Harbor">
+    <Name>Marriott Phoenix Downtown</Name>
+    <Address>
+      <Number>100</Number>
+      <Street>W Monroe St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85003</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- (4) Address element missing a closing tag (malformed XML from here on) -->
+  <Hotel NearestAirport="Sky Harbor">
+    <Name>Sheraton Phoenix Downtown</Name>
+    <Phone>602-262-2500</Phone>
+    <Address>
+      <Number>340</Number>
+      <Street>N 3rd St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+  <!-- no </Address> and no closing tags below on purpose -->
